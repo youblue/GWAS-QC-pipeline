@@ -2,7 +2,7 @@
 
 use strict;
 
-chdir("${OUTPUT_DIR}");
+chdir("/dc2/wzhang01/Adarsh/outputs/QC_train_t321-0105");
 
 open IN, '<', "clean_inds_data_test_missing.missing" or die "Cannot open missing file \n";
 open OUT, '>', "fail_diffmiss_data.txt";

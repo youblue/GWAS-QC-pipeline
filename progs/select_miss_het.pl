@@ -5,7 +5,7 @@ $cut_het_low=0.172850696902036;
 
 $cut_miss=0.01;
 
-chdir("${OUTPUT_DIR}");
+chdir("/dc2/wzhang01/Adarsh/outputs/QC_train_t321-0105");
 
 open(MISSFILE,"data_miss.imiss");
 open(HETFILE,"data_het.het");

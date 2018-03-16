@@ -1,9 +1,12 @@
-setwd("${OUTPUT_DIR}")
+setwd("/dc2/wzhang01/Adarsh/outputs/QC_train_t321-0105")
 
 args <- commandArgs(trailingOnly = TRUE)
 inputpathname = args[1]
 outputpathname = args[2]
 famname = args[3]
+
+setwd("/dc2/wzhang01/Adarsh/outputs/QC_train_t321-0105")
+
 
 print("reading genome file")
 data = read.table(paste(inputpathname, ".genome", sep=""), h=T)
@@ -17,7 +20,7 @@ plot(data$PI_HAT, xlab="Index", ylab="Proportion IBD")
 abline(h=0.185,col="RED",lty=2)
 dev.off()
 
-out = which(data$PI_HAT > 0.185)
+out = which(data$PI_HAT > 0.1875)
 write.table(data[out,], file=paste(outputpathname, "/fail-IBD-check.txt", sep=""), col.names=T, row.names=F)
 
 print("calculate avgDST")

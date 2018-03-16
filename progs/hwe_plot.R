@@ -1,6 +1,6 @@
 #Load HWE P-value file and generate frequency_distribution
 
-setwd("${OUTPUT_DIR}")
+setwd("/dc2/wzhang01/Adarsh/outputs/QC_train_t321-0105")
 
 b.frq <- read.table("clean_inds_data_hwe.hwe",header=T)
 pdf("hwe_plot.pdf")
